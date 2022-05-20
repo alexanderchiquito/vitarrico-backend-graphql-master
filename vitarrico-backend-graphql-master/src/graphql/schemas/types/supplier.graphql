@@ -1,0 +1,25 @@
+type Supplier {
+    _id: ID!
+    name: String!
+    location: String!
+    experience: Float!
+    business: String!
+}
+
+input CreateSupplier {
+     name: String
+     location: String
+     experience: Float
+     business: String
+}
+
+type Query{
+    suppliers: [Supplier]!
+}
+
+type Mutation{
+    createSupplier(supplier: CreateSupplier): Supplier!
+    deleteSupplier(id: ID!): String
+    updateSupplier(id: ID!, supplier: CreateSupplier): Supplier!
+
+}
