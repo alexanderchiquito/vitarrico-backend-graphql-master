@@ -1,15 +1,19 @@
 type User {
     _id: ID!
-    username: String!
+    firstName: String!
+    lastName:String!
     password: String!
     age: Float!
+    phoneNumber: Float!
     country: String!
 }
 
 input CreateUser{
-    username: String
+    firstName: String!
+    lastName:String!
     password: String
     age: Float
+    phoneNumber: Float
     country:String
 }
 

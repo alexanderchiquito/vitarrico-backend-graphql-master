@@ -2,7 +2,12 @@ import { Schema, model, Types } from 'mongoose';
 
 const User = new Schema({
 
-    username:{
+    firstName:{
+        type: String,
+        require: true,
+        trim: true
+    },
+    lastName:{
         type: String,
         require: true,
         trim: true
@@ -13,6 +18,11 @@ const User = new Schema({
         trim: true
     },
     age:{
+        type: Number,
+        require: true,
+        trim: true
+    },
+    phoneNumber:{
         type: Number,
         require: true,
         trim: true
